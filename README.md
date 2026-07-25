@@ -38,17 +38,17 @@ We simulate a dart player throwing at a standard dartboard, modeling the landing
 Our simulations confirm the theory that the **optimal aim point is highly skill-dependent**:
 
 * **Beginners / Less Skilled Players (Radius 0.3 to 0.05):** 
-  Due to a large throwing spread, these players should target high-value segment clusters, such as areas around the **19 segment**[cite: 1]. Because their high variability frequently results in misses into adjacent sections, targeting a small, isolated high-value zone (like Treble 20) yields lower expected returns than aiming for regions flanked by high-scoring neighbors[cite: 1].
+  Due to a large throwing spread, these players should target high-value segment clusters, such as areas around the 19 segment. Because their high variability frequently results in misses into adjacent sections, targeting a small, isolated high-value zone (like Treble 20) yields lower expected returns than aiming for regions flanked by high-scoring neighbors.
 * **Advanced / Expert Players (Radius 0.005 to 0.0005):** 
-  As accuracy improves and the error radius shrinks, the optimal target shifts cleanly into the **20 segment**[cite: 1]. The highest-skilled players maximize their expected value by targeting the **Treble 20** for a potential 60 points[cite: 1]. 
-* **Score Nuance:** Even when the optimal target point stabilizes for top-tier skill levels, the simulation's average score metrics show subtle upward differences as the radius continues to shrink, reflecting the elimination of minor outer-edge variance[cite: 1].
+  As accuracy improves and the error radius shrinks, the optimal target shifts cleanly into the 20 segment. The highest-skilled players maximize their expected value by targeting the Treble 20 for a potential 60 points. 
+* **Score Nuance:** Even when the optimal target point stabilizes for top-tier skill levels, the simulation's average score metrics show subtle upward differences as the radius continues to shrink, reflecting the elimination of minor outer-edge variance.
 
 ![Simulation Results](optimal_dart_targets.png)
 ---
 
 ## 💻 Simulation Implementation Details
 
-The core optimization loop is built using R, iterating over defined skill levels and generating a dense coordinate grid to find the maximum expected return[cite: 1]:
+The core optimization loop is built using R, iterating over defined skill levels and generating a dense coordinate grid to find the maximum expected return:
 
 ```r
 score_points <- function(points) {
