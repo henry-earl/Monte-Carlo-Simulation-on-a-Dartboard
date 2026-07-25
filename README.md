@@ -43,6 +43,8 @@ Our simulations confirm the theory that the **optimal aim point is highly skill-
   As accuracy improves and the error radius shrinks, the optimal target shifts cleanly into the **20 segment**[cite: 1]. The highest-skilled players maximize their expected value by targeting the **Treble 20** for a potential 60 points[cite: 1]. 
 * **Score Nuance:** Even when the optimal target point stabilizes for top-tier skill levels, the simulation's average score metrics show subtle upward differences as the radius continues to shrink, reflecting the elimination of minor outer-edge variance[cite: 1].
 
+![Simulation Results](optimal_aim_points.png)
+
 ---
 
 ## 💻 Simulation Implementation Details
@@ -75,5 +77,4 @@ for (i in 1:length(skill_levels)) {
   results$best_score[i] <- max(score_matrix)
 }
 
-
-![Simulation Results](optimal_aim_points.png)
+```
